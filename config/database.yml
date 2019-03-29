@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: spritlesoftware
+  password: spritle123
+
+development:
+  <<: *default
+  database: todoapp_development
+
+test:
+  <<: *default
+  database: todoapp_test
+
+production:
+  <<: *default
+  database: todoapp_production
+  username: todoapp
+  password: <%= ENV['TODOAPP_DATABASE_PASSWORD'] %>
