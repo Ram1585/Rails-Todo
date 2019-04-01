@@ -4,4 +4,7 @@ Rails.application.routes.draw do
   		root to: 'devise/sessions#new'
   	end
 	get 'welcome', to: 'welcome#home' 
+	post 'createtask', to: 'welcome#createTask'
+
+
 end

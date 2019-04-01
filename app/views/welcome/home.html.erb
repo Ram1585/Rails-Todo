@@ -1,11 +1,30 @@
 <div class="container">
-	<div class="row">	
-		<div class="col-sm-6">
-			<h3>TODO</h3>
+
+	<%= render "header" %>
+		
+	<%=form_tag(controller:'welcome',action:'createTask',method:'post') do %>	
+	<div class="row">
+		<div class="col-lg-4">
+			<%=label_tag(:task_title,"Task Title") %><br/>
+			<%=text_field_tag(:task_title) %><br/>
+			<div class="error">
+				<% if @errors.include?(:task_title) %>
+					<%=@errors[:task_title][0] %>
+				<% end %>	
+			</div>
 		</div>
-		<div class="col-sm-6">
-			<%="Welcome "+current_user.name%>
-			<%=link_to("Logout", destroy_user_session_path, method: :delete)%>
+		<div class="col-lg-4">
+			<%=label_tag(:task_description ,"Task Description") %><br/>
+			<%=text_area_tag(:task_description,"",rows: "5") %>
+			<div class="error">
+				<% if @errors.include?(:task_description) %>
+					<%=@errors[:task_description][0] %>
+				<% end %>
+			</div>
 		</div>
-	</div>		
+		<div class="col-lg-4">
+			<%=submit_tag("Add task") %>
+		</div>
+	</div>
+	<% end %>
 </div>
