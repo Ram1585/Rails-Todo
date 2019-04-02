@@ -6,11 +6,14 @@ body{background-color:#ffffff;border-top-color:#007691;}
 .signin_wrap{position:absolute;left:0;right:0;top:0;bottom:0;margin:auto;width:30%;height:270px;}
 .signin_wrap.signup{height:390px;}
 .box_bar{background-color:#003947;color:#c7c7c7;font-size:20px;padding:5px 20px;font-weight:bold;}
-.signin_wrap label{margin-bottom:3px;color:#003947;}
+.form_wrap label{margin-bottom:3px;color:#003947;}
 .form_wrap{padding:5px 20px;background-color:#c7c7c7;border-bottom-left-radius:4px;border-bottom-right-radius:4px}
 .form_wrap .form-control{height:30px;}
+.form_wrap textarea.form-control{height:auto;}
 .form_wrap .form-group{margin-bottom:10px}
 .center-btns{text-align:center}
-
-
+.form-group .error {font-size: 13px;text-align: right;color: #d71820;height: 15px;line-height: 15px;}
+.header{margin-top:20px;margin-bottom:30px;}
+.header h3{font-size:18px;line-height:18px;}
+.headcont{text-align:right;line-height:18px;font-size:14px;}
 

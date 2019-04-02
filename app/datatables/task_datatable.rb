@@ -11,9 +11,10 @@ class TaskDatatable < AjaxDatatablesRails::ActiveRecord
   end
 
   def data
+    i=0
     records.map do |record|
       {
-        id: record.id,
+        id: i+=1,
         task_title: record.task_title,
         created_at: record.created_at
       }

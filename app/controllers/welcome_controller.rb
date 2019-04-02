@@ -22,9 +22,6 @@ class WelcomeController < ApplicationController
 		p @errors
 		render :home
 	end
-	def viewTask
-		
-	end
 	def viewData
 		respond_to do |format|
 		   format.html
