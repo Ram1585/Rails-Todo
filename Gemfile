@@ -31,7 +31,8 @@ gem 'bootstrap'
 gem 'jquery-rails'
 gem 'devise'
 gem 'haml'
-
+gem 'jquery-datatables'
+gem 'ajax-datatables-rails'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

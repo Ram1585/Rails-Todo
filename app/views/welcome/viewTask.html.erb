@@ -1,0 +1,16 @@
+<div class="container">
+	<%= render "header" %>
+
+	<table id="tasks-datatable" data-source="<%= viewdata_path(format: :json) %>">
+	  <thead>
+	    <tr>
+	      <th>ID</th>
+	      <th>Task Title</th>
+	      <th>Created on</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	  </tbody>
+	</table>
+
+</div>

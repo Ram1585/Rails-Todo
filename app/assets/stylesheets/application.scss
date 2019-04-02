@@ -1,6 +1,8 @@
 @import 'bootstrap';
+@import "datatables";
+
 .clear{clear:both;}
-body{background-color:#007691;}
+body{background-color:#ffffff;border-top-color:#007691;}
 .signin_wrap{position:absolute;left:0;right:0;top:0;bottom:0;margin:auto;width:30%;height:270px;}
 .signin_wrap.signup{height:390px;}
 .box_bar{background-color:#003947;color:#c7c7c7;font-size:20px;padding:5px 20px;font-weight:bold;}
@@ -9,4 +11,6 @@ body{background-color:#007691;}
 .form_wrap .form-control{height:30px;}
 .form_wrap .form-group{margin-bottom:10px}
 .center-btns{text-align:center}
+
+
 

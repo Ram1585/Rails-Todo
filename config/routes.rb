@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   	end
 	get 'welcome', to: 'welcome#home' 
 	post 'createtask', to: 'welcome#createTask'
-
-
+	get 'viewtask', to: 'welcome#viewTask'
+	get 'viewdata', to: 'welcome#viewData'
 end

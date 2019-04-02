@@ -22,4 +22,13 @@ class WelcomeController < ApplicationController
 		p @errors
 		render :home
 	end
+	def viewTask
+		
+	end
+	def viewData
+		respond_to do |format|
+		   format.html
+		   format.json { render json: TaskDatatable.new(params) }
+		end
+	end
 end
