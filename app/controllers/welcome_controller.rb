@@ -25,7 +25,7 @@ class WelcomeController < ApplicationController
 	def viewData
 		respond_to do |format|
 		   format.html
-		   format.json { render json: TaskDatatable.new(params) }
+		   format.json { render json: TaskDatatable.new(params, user: current_user.id) }
 		end
 	end
 end

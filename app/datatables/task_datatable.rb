@@ -22,7 +22,7 @@ class TaskDatatable < AjaxDatatablesRails::ActiveRecord
   end
 
   def get_raw_records
-    Task.all
+    Task.where(user_id: options[:user])
   end
 
 end
