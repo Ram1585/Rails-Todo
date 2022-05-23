@@ -16,8 +16,13 @@ jobs:
         id: tag-version
         run: echo ::set-output name=latest-tag::$(git describe --tags --match 'v*' --abbrev=0)
         
-      - name: Display tag version
-        run: echo "Latest tag is ${{ steps.tag-version.outputs.latest-tag }}"
+      - name: Get new commit list
+        id: commits
+        run: echo ::set-output name=list::$(git log --pretty='tformat:%H %s\\n' ${{ steps.tag-version.outputs.latest-tag }}..)
+
+      - name: Display commit list
+        run: echo ${{ steps.commits.outputs.list}}
+
     # run: git log {{github.}}.. --pretty='format: %H %s <%as>'
     # - run: echo {{github.ref}}
         
