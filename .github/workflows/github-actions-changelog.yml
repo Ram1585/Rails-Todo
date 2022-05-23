@@ -7,9 +7,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
         with:
           fetch-depth: 0
-          ref: $(git describe --tags --match 'v*' --abbrev=0)
 
-      - run: echo {{github.ref}}
+      - name: Latest release tag
+        id: tag-version
+        run: echo ::set-output name=latest-tag::$(git describe --tags --match 'v*' --abbrev=0)
+        
+      - name: Display tag version
+        run: echo "Latest tag is ${{ steps.tag-version.outputs.latest-tag }}"
+    # run: git log {{github.}}.. --pretty='format: %H %s <%as>'
+    # - run: echo {{github.ref}}
+        
+        
